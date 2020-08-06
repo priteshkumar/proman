@@ -34,18 +34,26 @@
 
 
 ### gitignore rules
-The Most Important Use Cases
-First things first, how can we exclude every target folder created by Maven in every sub-module?
+The Most Important Use Cases:
 
-The answer is very easy: target/
-This will match any directory (but not files, hence the trailing /) in any subdirectory relative to the .gitignore file. This means we don’t even need any * at all.
+> First things first, how can we exclude every target folder created by Maven in every sub-module?
 
-Here is an overview of the most relevant patterns:
+`The answer is very easy: target/
+This will match any directory (but not files, hence the trailing /) in any subdirectory relative to the .gitignore file. This means we don’t even need any * at all.`
+
+
+> Here is an overview of the most relevant patterns:
+
 
 .gitignore entry	Ignores every…
+
 target/	…folder (due to the trailing /) recursively
+
 target	…file or folder named target recursively
+
 /target	…file or folder named target in the top-most directory (due to the leading /)
+
 /target/	…folder named target in the top-most directory (leading and trailing /)
+
 *.class	…every file or folder ending with .class recursively
 
