@@ -20,7 +20,7 @@ public class UserBusinessService {
   @Autowired
   PasswordCryptographyProvider passwordCryptographyProvider;
 
-  @Transactional(propagation = Propagation.REQUIRED)
+  //@Transactional(propagation = Propagation.REQUIRED)
   public UserEntity getUser(String userUUID,String authorization)
       throws ResourceNotFoundException, UnAuthorizedException {
     UserAuthTokenEntity authToken = userDao.getAuthToken(authorization);
